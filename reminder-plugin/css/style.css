@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    background: #fff;
+    flex-direction: column;
+    margin: 0;
+    width: 400px;    
+}
+
+.main {
+    background-color: #fff;
+    padding: 10px;
+    transition: transform 0.2s;
+    width: 95%;
+    overflow:hidden;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+}
+
+.view-all-reminders {
+    float: right;
+    text-decoration:none;
+    color: black;
+    font-style: italic;
+}
+
+.view-all-reminders:hover {
+    text-decoration-line: underline
+}
+
+.login {
+    text-decoration:none;
+    color: black;
+    font-style: italic;
+}
+
+.login:hover {
+    text-decoration-line: underline
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.text-area-max-label {
+    font-size: x-small;
+}
+
+button {
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #4CAF50;
+    width: 100%;
+    font-size: 16px;
+}
+
+.back-btn {
+    display: none;
+}
+
+.status-message {
+    border-radius: 5px;
+    padding-left: 5px;
+}

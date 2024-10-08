@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>My Reminders</title>
+        <link rel="stylesheet" type="text/css" href="../css/sidepanel.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <div class="main">
+
+            <div id="view-reminder-header">
+                <h3>Select Date</h3>
+                <div style="display: flex;">
+                    <input id="reminder-date-time" type="datetime-local"/>
+                    <button class="search-btn" id="search-reminders"><i class="fa fa-search" style="font-size: 24px;"></i></button>
+                </div>
+            </div>
+
+            <ul id ="reminder-list"> 
+            </ul>
+
+        </div>
+
+    </body>
+    <script src="../js/common.js"></script>
+    <script src="../js/view-reminder.js"></script>
+</html>

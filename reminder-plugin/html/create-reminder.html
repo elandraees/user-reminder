@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>My Reminders</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    </head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <div style="width: 50%;">
+                    <span class="create-reminder-header"><h3>Create Reminder</h3> </span>
+                </div>
+                <div style="align-self: center;width: 50%;">
+                    <a href="#" id="open-reminders" class="view-all-reminders">View Reminders</a>
+                </div>
+            </div>
+            
+            <div class="status-div" id="status">
+                <p id="status-message"></p>
+            </div>
+
+            <div class="date-container">
+                <label><b>Reminder Date</b></label>
+                <input id="date-time" type="datetime-local" required/>
+            </div>
+            <div class="reminder-text">
+                <label class="note-label"><b>Note</b></label>
+                <textarea id="reminder-note" class="note-input" rows="4" cols="50" maxlength="255" required></textarea>
+                <label class="text-area-max-label">Max 255 chars.</label>
+            </div>
+            <div class="buttons">
+                <button class="create-reminder-btn" id="create-reminder-btn" type="submit" title="Create Reminder">Create Reminder</button>
+                <button class="back-btn" type="button" id="back-btn">Back</button>
+                <div style="text-align: center;" id="login-div">
+                    <a href="login.html" class="login">Login</a>
+                </div>
+                <div style="text-align: center;" id="login-div">
+                    <a href="#" class="login" id="logout">Logout</a>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/create-reminder.js"></script>
+</html>
