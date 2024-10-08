@@ -8,7 +8,7 @@ import stripe
 # This test secret API key is a placeholder. Don't include personal details in requests with this key.
 # To see your test secret API key embedded in code samples, sign in to your Stripe account.
 # You can also find your test secret API key at https://dashboard.stripe.com/test/apikeys.
-stripe.api_key = 'sk_test_51PnJGS2LucV5q4G28sO8MrOsoODnyxSQ3D7TpxVV1t7viTRfGAbiHaCvLQjUVeCwdeX1F6veDDJYLVm1olYeuwLz00XDwZEsjq'
+stripe.api_key = ''
 
 stripe_bp = Blueprint('stripe', __name__, url_prefix='/stripe')
 
@@ -69,7 +69,7 @@ def webhook_received():
     # If you are testing with the CLI, find the secret by running 'stripe listen'
     # If you are using an endpoint defined with the API or dashboard, look in your webhook settings
     # at https://dashboard.stripe.com/webhooks
-    webhook_secret = 'whsec_12345'
+    webhook_secret = ''
     signature = request.headers.get('Stripe-Signature')
 
     try:
