@@ -1,20 +1,18 @@
-def threeSum(nums: list[int]) -> list[list[int]]:
-    result = []
+from flask import Flask, request, jsonify
+from reminder.controllers.v1.reminder_controller import reminder_bp
+from stripebilling.controller.stripe_controller import stripe_bp
+from user.controllers.v1.user_controller import user_bp
+from flask_cors import CORS, cross_origin
 
-    for i in range(len(nums) - 2):
-        j = i + 1
-        while j < len(nums) - 1:
-            k = j + 1
-            while k < len(nums):
-                if nums[i] + nums[j] + nums[k] == 0:
-                    arr = [nums[i], nums[j], nums[k]]
-                    arr.sort()
-                    if arr not in result:
-                        result.append(arr)
-                k = k + 1
-            j = j + 1
+app = Flask(__name__)
 
-    return result
+app.register_blueprint(reminder_bp)
+app.register_blueprint(user_bp)
+app.register_blueprint(stripe_bp)
 
 
-print(threeSum([-1, 0, 1, 2, -1, -4]))
+# Local deployment:
+# If debug is disabled, the development server on the local computer can be made available to
+# users on the network by setting the host name to ‘0.0.0.0’.
+if __name__ == '__main__':
+    app.run(debug=True)
